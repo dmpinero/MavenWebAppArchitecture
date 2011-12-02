@@ -1,0 +1,38 @@
+<zk>
+	 <!--  Asociación de eventos generados y la clase que los procesa -->
+	 <window id="ventana1" title="Ejemplo de ventana" border="normal" width="250px" height="80%"
+	         closable="true" maximizable="true" tooltip="Texto cuando se pasa el ratón"
+	         mode="embedded"
+	         apply="com.tecnisev.ClaseEjemplo"
+	         minwidth="100">
+	  	<button label="Etiqueta botón 1" />
+	  	<button label="Etiqueta botón 2" />
+	  	
+	  	<!--  También se pueden cambiar las propiedades mediante funciones javascript -->
+		<button label="Overlap" onClick="ventana1.doOverlapped();"/>
+		<button label="Popup" onClick="ventana1.doPopup();"/>
+		<button label="Modal" onClick="ventana1.doModal();"/>
+		<button label="Embed" onClick="ventana1.doEmbedded();"/>
+		<button label="Highlighted" onClick="ventana1.doHighlighted();"/>  	
+		
+		<!--  Crear botón (mediante Java) -->
+		<button id="crearBoton" label="Crear botón" />
+		
+		<!--  Crear botón (mediante zul en una nueva ventana) -->
+		<button label="Crear botón en ventana 2">
+			<attribute name="onClick">
+			<![CDATA[
+			Button btn2 = new Button();
+			btn2.setLabel("Nueva !");
+			btn2.setParent(ventana2);
+			]]>
+			</attribute>	
+		</button>
+		
+	 </window>
+	 
+	 <window id="ventana2" title="Ventana 2" width="250px" height="80%"
+	         mode="embedded">
+	    <label id="labelVentana2"></label>
+	 </window>
+ </zk>
