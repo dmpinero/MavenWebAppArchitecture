@@ -1,0 +1,10 @@
+<zk>
+	 <!--  Asociación de eventos generados y la clase que los procesa -->
+	 <window id="ventana1" title="Ejemplo de ventana" border="normal" width="250px" height="80%"
+	         closable="true" maximizable="true" tooltip="Texto cuando se pasa el ratón"
+	         mode="embedded"
+	         apply="com.tecnisev.ClaseEjemplo"
+	         minwidth="100">
+	  	<button label="${cadenaEjemplo}" />
+	 </window>
+ </zk>

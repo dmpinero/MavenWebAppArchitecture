@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+   <bean id="claseEjemplo" class="com.tecnisev.ClaseEjemplo">
+  	  <property name="cadenaEjemplo" value="Hola mundo!!!" />
+   </bean>
+   
+    <!-- Conexión a la base de datos mysql -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+	      destroy-method="close">	   
+	  <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+	  <property name="url" value="jdbc:mysql://localhost:3306/gestionbiblioteca"/>
+	  <property name="username" value="root"/>
+	  <property name="password" value=""/>
+	</bean>
+	   
+</beans>
